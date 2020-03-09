@@ -1,18 +1,26 @@
-import bs4
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 
-url = "https://www.arukereso.hu/videokartya-c3142/"
 
-# Read the whole page
-uClient = uReq(url)
-page_response = uClient.read()
-uClient.close()
+def getInformation():
+    url = "https://www.origo.hu/index.html"
 
-# Parse html
-page = soup(page_response, "html.parser")
+    # Read the whole page
+    uClient = uReq(url)
+    page_response = uClient.read()
+    uClient.close()
 
-# Find the divs I'm looking for
-elements = page.findAll("div", {"class": "product-box-container"})
+    # Parse html
+    page = soup(page_response, "html.parser")
 
-print(len(elements))
+    # Find the divs I'm looking for
+    main_news_html = page.find("div", {"class": "news-text-block"})
+
+    headline = main_news_html.find("a", {"class": "news-title"})
+    headline_text = headline['title']
+    headline_link = headline['href']
+
+    print(headline_link)
+    print(headline_text)
+
+getInformation()
