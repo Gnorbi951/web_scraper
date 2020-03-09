@@ -1,5 +1,7 @@
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
+from filewriter import write_to_file
+import time
 
 
 def getInformation():
@@ -20,7 +22,11 @@ def getInformation():
     headline_text = headline['title']
     headline_link = headline['href']
 
-    print(headline_link)
-    print(headline_text)
+    return [headline_text, headline_link]
 
-getInformation()
+
+if __name__ == "__main__":
+
+    while True:
+        write_to_file(getInformation())
+        time.sleep(300)
