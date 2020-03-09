@@ -9,7 +9,5 @@ def write_to_file(input_list):
 
     with open("./web_scraping/pure_shit.txt", 'a') as f:
         string_to_be_written = f"{input_list[0]} -- {input_list[1]} \n"
-        print(string_to_be_written)
-        print(line)
         if string_to_be_written != line:
             f.write(string_to_be_written)
