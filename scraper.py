@@ -28,5 +28,8 @@ def getInformation():
 if __name__ == "__main__":
 
     while True:
-        write_to_file(getInformation())
+        try:
+            write_to_file(getInformation())
+        except:
+            print("whupsie")
         time.sleep(300)
