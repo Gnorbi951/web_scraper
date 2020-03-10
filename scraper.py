@@ -30,6 +30,6 @@ if __name__ == "__main__":
     while True:
         try:
             write_to_file(getInformation())
-        except:
-            print("whupsie")
+        except Exception as e:
+            print(e)
         time.sleep(300)

@@ -1,3 +1,9 @@
 Az origo szerint a legfontosabb hírek: 
 
 Egész Olaszországban <br>elrendelték a karantént -- https://www.origo.hu/nagyvilag/20200309-teljes-egeszeben-lezarjak-olaszorszagot-kedden.html 
+o a faszom<br> ebbe a zegészbe -- kek 
+['o', 'a', 'faszom', 'ebbe', 'a', 'zegészbe'] -- kek 
+oafaszomebbeazegészbe -- kek 
+o a faszom ebbe a zegészbe -- kek 
+Újabb 3 iráni egyetemistát diagnosztizáltak koronavírus-fertőzéssel -- https://www.origo.hu/itthon/20200310-ujabb-3-irani-egyetemistat-diagnosztizaltak-koronavirusfertozessel-koronav.html 
+Kormányzati segítséget ígért  gazdasági szereplőknek Orbán Viktor a koronavírus miatt -- https://www.origo.hu/gazdasag/20200310-kormanyzati-segitseget-igert-a-gazdasagi-szereploknek.html 
