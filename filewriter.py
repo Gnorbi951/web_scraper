@@ -6,9 +6,19 @@ def write_to_file(input_list):
     words = input_list[0].split()
     index_counter = 0
     for word in words:
+        """
         if "<br>" in word:
-            splitwords = word.split("<")
-            words[index_counter] = splitwords[0]
+            if word[-1] == ">":
+                splitwords = word.split("<")
+                words[index_counter] = splitwords[0]
+            else:
+                splitwords = word.split(">")
+                words[index_counter] = splitwords[1]
+        index_counter += 1
+        """
+        if "<br>" in word:
+            words[index_counter] = word.replace("<br>", " ")
+    
         index_counter += 1
     input_list[0] = " ".join(words)
 
@@ -18,8 +28,9 @@ def write_to_file(input_list):
 
     with open("./web_scraping/pure_shit.txt", 'a') as f:
         string_to_be_written = f"{input_list[0]} -- {input_list[1]} \n"
-        print(input_list[0])
         if string_to_be_written != line:
-            f.write(string_to_be_written)
+            #f.write(string_to_be_written)
+            print(string_to_be_written)
 
-write_to_file(["o a faszom<br> ebbe a zegészbe", "kek"])
+
+write_to_file(["Orbán Viktor: <br>Kapcsolat van<br> a migráció és a koronavírus-járvány között", "kek"])
