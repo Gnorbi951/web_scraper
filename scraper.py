@@ -16,13 +16,12 @@ def getInformation():
     page = soup(page_response, "html.parser")
 
     # Find the divs I'm looking for
-    main_news_html = page.find("div", {"class": "news-text-block"})
+    main_news_html = page.find("article", {"class": "article-top-story"})
 
-    headline = main_news_html.find("a", {"class": "news-title"})
-    headline_text = headline['title']
-    headline_link = headline['href']
+    main_title_tag = main_news_html.find("h1")
+    main_title_text = str(main_title_tag)[4:-5]
 
-    return [headline_text, headline_link]
+    return main_title_text
 
 
 if __name__ == "__main__":
